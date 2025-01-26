@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="hero">
+            <nav class="navbar">
+                <a href="#" class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></a>
+                <ul class="nav-links" ">
+                    <li><a href=" #about">About Me</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li id="shop"><a href="http://127.0.0.1:5000/shop">Shop</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="banner">
+            <div class="slider" style="--quantity:9">
+                <div class="item" style="--position:1;">
+                    <p>Vintage Photography</p><img src="{{ url_for('static', filename='images/img1.jpg')}}" alt="wd">
+                </div>
+                <div class="item" style="--position:2;">
+                    <p>Macro Photography</p><img src="{{ url_for('static', filename='images/img2.jpg')}}" alt="">
+                </div>
+                <div class="item" style="--position:3;">
+                    <p>Vintage Photography</p><img src="{{ url_for('static', filename='images/img3.jpg')}}" alt="">
+                </div>
+                <div class="item" style="--position:4; --quantity: 9;">
+                    <p>WildLife PhotoGraphy</p><img src="{{ url_for('static', filename='images/img4.jpg')}}" alt="">
+                </div>
+                <div class="item" style="--position:5; --quantity: 9;">
+                    <p>Vintage Photography</p><img src="{{ url_for('static', filename='images/img5.jpg')}}" alt="">
+                </div>
+                <div class="item" style="--position:6; --quantity: 9;">
+                    <p>Vintage Photography</p><img src="{{ url_for('static', filename='images/img6.jpg')}}" alt="">
+                </div>
+                <div class="item" style="--position:7; --quantity: 9;">
+                    <p>Vintage Photography</p><img src="{{ url_for('static', filename='images/img7.jpg')}}" alt="">
+                </div>
+                <div class="item" style="--position:8; --quantity: 9;">
+                    <p>Vintage Photography</p><img src="{{ url_for('static', filename='images/img8.jpg')}}" alt="">
+                </div>
+                <div class="item" style="--position:9; --quantity: 9;">
+                    <p>Vintage Photography</p><img src="{{ url_for('static', filename='images/img9.jpg')}}" alt="">
+                </div>
+            </div>
+            <div class="content">
+                <h1 data-content="My Collection">My</h1>
+                <!-- <div class="imggg"><img src="images\Description_fbf40aba-ad67-40c2-beab-a9c39277d9a4 (1).jpg" alt=""></div> -->
+                <!-- <div class="author">
+                    <h2>Raju</h2>
+                    <p><b>photographer</b></p>
+                </div> -->
+                <div class="model">
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- About Me Section -->
+        <section id="about" class="about">
+            <h2>About Me!!!</h2>
+            <div class="about-content">
+                <img src="{{ url_for('static', filename='images/profile-pic.png')}}" alt="Artist Profile">
+                <div>
+                    <h1>I'm <b>Raju kushwaha</b> and Im a <i>Professional Photographer</i></h1>
+                    <p>Welcome to my portfolio! I am a passionate artist specializing in painting, sculpting, and
+                        photography. My work captures emotions, tells stories, and brings visions to life. Let my art
+                        inspire and connect with you.</p>
+                    <div><a href="http://127.0.0.1:5000/about">About MOre.....!!!</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <h2>Gallery</h2>
+            <div class="minimap">
+                <div class="preview"></div>
+            </div>
+            <div class="images">
+
+                <div class="img"><img src="{{ url_for('static', filename='images/img1.jpg')}}" alt="img"></div>
+                <div class="img"><img src="{{ url_for('static', filename='images/img2.jpg')}}" alt="Artwork 2"></div>
+                <div class="img"><img src="{{ url_for('static', filename='images/img3.jpg')}}" alt="Artwork 3"></div>
+                <div class="img"><img src="{{ url_for('static', filename='images/img4.jpg')}}" alt="Artwork 4"></div>
+                <div class="img"><img src="{{ url_for('static', filename='images/img5.jpg')}}" alt="Artwork 5"></div>
+                <div class="img"><img src="{{ url_for('static', filename='images/img6.jpg')}}" alt="Artwork 6"></div>
+                <div class="img"><img src="{{ url_for('static', filename='images/img7.jpg')}}" alt="Artwork 6"></div>
+                <div class="img"><img src="{{ url_for('static', filename='images/img8.jpg')}}" alt="Artwork 6"></div>
+
+            </div>
+        </section>
+        <section class="art">
+            <h2>My Art</h2>
+            <div class="slider1">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/wildlife/wildlife/0cb19eb19a5268b4edc99e32021af937.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/food/food/088f356a0a2cdf996ff9ac8c68b5899c.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/wildlife/wildlife/0cb19eb19a5268b4edc99e32021af937.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vintage/vintage/13215fba27d026578d13e0ce3b1387d3.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/food/food/41c7bf3422cff4a9ac1fb49f4d545513.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/macro/macro/1222c9a85a28073c140b128310929ec8.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/macro/macro/b7d8a310f44a170ce002bd4823756f45.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vintage/vintage/bad44e4ddeb5313d6e2a0d17332972fc.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/food/food/7a5d9dd0385ca266ec916493b45b1abc.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/food/food/c65d9270aa93ea195eb30452a4ec5e19.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/wildlife/wildlife/0cb19eb19a5268b4edc99e32021af937.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/food/food/088f356a0a2cdf996ff9ac8c68b5899c.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/wildlife/wildlife/0cb19eb19a5268b4edc99e32021af937.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vintage/vintage/13215fba27d026578d13e0ce3b1387d3.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/food/food/41c7bf3422cff4a9ac1fb49f4d545513.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/macro/macro/1222c9a85a28073c140b128310929ec8.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/macro/macro/b7d8a310f44a170ce002bd4823756f45.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vintage/vintage/bad44e4ddeb5313d6e2a0d17332972fc.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/food/food/7a5d9dd0385ca266ec916493b45b1abc.jpg')}}"
+                            alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/food/food/c65d9270aa93ea195eb30452a4ec5e19.jpg')}}"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop" class="shop">
+            <h2>Shop</h2>
+            <p>Purchase original artwork and prints directly from my portfolio.</p>
+            <div class="shop-grid">
+                <div class="shop-item">
+                    <img src="{{ url_for('static', filename='images/vintage/vintage/9520069fa64c0a34f43cfc0ab96973fc.jpg')}}"
+                        alt="Product 1">
+                    <h3>Hint at the theme</h3>
+                    <p>$100</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="{{ url_for('static', filename='images//macro/macro/b7d8a310f44a170ce002bd4823756f45.jpg')}}"
+                        alt="Product 2">
+                    <h3>Matter</h3>
+                    <p>$200</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="{{ url_for('static', filename='images/vintage/vintage/d6dc404d78a7b5e3f26d66df3b4f8ccb.jpg')}}"
+                        alt="Product 2">
+                    <h3>skiesy wolf</h3>
+                    <p>$200</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="shop-grid">
+                <div class="shop-item">
+                    <img src="{{ url_for('static', filename='images/wildlife/wildlife/dd75ae34876a4ec047bc86ac437903cb.jpg')}}"
+                        alt="Product 1">
+                    <h3>Artwork Title</h3>
+                    <p>$100</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="{{ url_for('static', filename='images/macro/macro/ae6f99928099b8031095f84f0f1f6124.jpg')}}"
+                        alt="Product 2">
+                    <h3>Artwork Title</h3>
+                    <p>$200</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="{{ url_for('static', filename='images/wildlife/wildlife/7b5fafec2fb9a51a5406d04d76257c4d.jpg')}}"
+                        alt="Product 2">
+                    <h3>Blind Eyes</h3>
+                    <p>$200</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+            </div>
+            <a href="http://127.0.0.1:5000/shop">Buy More...</a>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Lets Capture Magic</h2>
+            <p>If you have inquiries or would like to commission a piece, feel free to reach out.</p>
+            <form action="/submit-form" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Raju. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+                <a href="#">Facebook</a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const numberOdImages = 8;
+            const minimap = document.querySelector('.minimap .preview')
+            const fullSizeContainer = document.querySelector(".images")
+
+            function getRandomLeft() {
+                const values = [-15, -7.5, 0, 7.5, 15];
+                return values[Math.floor(Math.random() * values.length)] + 'px';
+
+            }
+
+            minimap.innerHTML = '';
+            fullSizeContainer.innerHTML = '';
+
+            let activeThubnail = null;
+
+            for (let i = 1; i <= numberOdImages; i++) {
+                const randomLeft = getRandomLeft();
+                const imagePath = `./static/images/img${i}.jpg`
+
+                const thubnailDiv = document.createElement('div')
+                thubnailDiv.className = 'img-thumbnail'
+                thubnailDiv.style.left = randomLeft;
+                const imgThumbnail = document.createElement('img')
+                imgThumbnail.src = imagePath;
+                thubnailDiv.appendChild(imgThumbnail);
+                minimap.appendChild(thubnailDiv)
+
+                const imgDiv = document.createElement('div')
+                imgDiv.className = 'img';
+                imgDiv.style.left = randomLeft;
+                const imgFull = document.createElement('img')
+                imgFull.src = imagePath;
+                imgDiv.appendChild(imgFull)
+                fullSizeContainer.appendChild(imgDiv)
+
+
+
+                gsap.registerPlugin(ScrollTrigger);
+                ScrollTrigger.create({
+                    trigger: imgDiv,
+                    start: 'top center',
+                    end: "bottom center",
+                    onToggle: self => {
+                        if (self.isActive) {
+                            if (activeThubnail && activeThubnail !== thubnailDiv) {
+                                animateThumbnail(activeThubnail, false);
+                            }
+                            animateThumbnail(thubnailDiv, true)
+                            activeThubnail = thubnailDiv;
+
+                        }
+                        else if (activeThubnail === thubnailDiv) {
+                            animateThumbnail(thubnailDiv, false)
+                        }
+                    }
+
+                })
+            }
+            function animateThumbnail(thumbnail, isActive) {
+                gsap.to(thumbnail, {
+                    border: isActive ? '1px solid #fff' : 'none',
+                    opacity: isActive ? 1 : 0.5,
+                    scale: isActive ? 1.3 : 1,
+                    zIndex: isActive ? 1000 : 1,
+                    duration: 0.3
+                })
+            }
+        })
+
+
+        let prevScrollPos = window.pageYOffset; // Store the initial scroll position
+        const navbar = document.getElementsByClassName("navbar");
+
+        window.addEventListener("scroll", () => {
+            const currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                // User is scrolling up
+                navbar.classList.add("show");
+                navbar.classList.remove("hide");
+            } else {
+                // User is scrolling down
+                navbar.classList.add("hide");
+                navbar.classList.remove("show");
+            }
+
+            prevScrollPos = currentScrollPos; // Update the previous scroll position
+        });
+    </script>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

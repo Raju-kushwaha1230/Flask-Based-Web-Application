@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/shop.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero">
+        <nav class="navbar">
+            <a href="#" class="logo">Artist's Shop</a>
+            <ul class="nav-links">
+                <li><a href="http://127.0.0.1:5000/">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Welcome to My Art Shop</h1>
+            <p>Find and purchase original artwork and prints.</p>
+        </div>
+    </header>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop">
+        <h2>Shop</h2>
+        <p>Explore unique art pieces and bring creativity into your space.</p>
+        <div class="shop-grid">
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='images/wildlife/wildlife/4bddc407091ad36faa8231578a66bf4e.jpg')}}" alt="Artwork 1">
+                <h3>Sunset Bliss</h3>
+                <p>$150</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='images/wildlife/wildlife/abeec4a29997a1f12b746094d1bd351e.jpg')}}" alt="Artwork 2">
+                <h3>Forest Whisper</h3>
+                <p>$120</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='/images/wildlife/wildlife/7b5fafec2fb9a51a5406d04d76257c4d.jpg')}}" alt="Artwork 3">
+                <h3>Abstract Dreams</h3>
+                <p>$180</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="{{url_for('static', filename='images/macro/macro/ae6f99928099b8031095f84f0f1f6124.jpg')}}" alt="Artwork 4">
+                <h3>Ocean Melody</h3>
+                <p>$200</p>
+                <button class="btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="shop-grid">
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='images/wildlife/wildlife/4bddc407091ad36faa8231578a66bf4e.jpg')}}" alt="Artwork 1">
+                <h3>Sunset Bliss</h3>
+                <p>$150</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='images/wildlife/wildlife/abeec4a29997a1f12b746094d1bd351e.jpg')}}" alt="Artwork 2">
+                <h3>Forest Whisper</h3>
+                <p>$120</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='/images/wildlife/wildlife/7b5fafec2fb9a51a5406d04d76257c4d.jpg')}}" alt="Artwork 3">
+                <h3>Abstract Dreams</h3>
+                <p>$180</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='images/macro/macro/ae6f99928099b8031095f84f0f1f6124.jpg')}}" alt="Artwork 4">
+                <h3>Ocean Melody</h3>
+                <p>$200</p>
+                <button class="btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="shop-grid">
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='images/wildlife/wildlife/4bddc407091ad36faa8231578a66bf4e.jpg')}}" alt="Artwork 1">
+                <h3>Sunset Bliss</h3>
+                <p>$150</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='images/wildlife/wildlife/abeec4a29997a1f12b746094d1bd351e.jpg')}}" alt="Artwork 2">
+                <h3>Forest Whisper</h3>
+                <p>$120</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='i/mages/wildlife/wildlife/7b5fafec2fb9a51a5406d04d76257c4d.jpg')}}" alt="Artwork 3">
+                <h3>Abstract Dreams</h3>
+                <p>$180</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='images/macro/macro/ae6f99928099b8031095f84f0f1f6124.jpg')}}" alt="Artwork 4">
+                <h3>Ocean Melody</h3>
+                <p>$200</p>
+                <button class="btn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Artist's Shop. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+            <a href="#">Facebook</a>
+        </div>
+    </footer>
+    <script>
+        // Adding interactivity to the shop page
+
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".shop-item .btn");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const itemName = button.previousElementSibling.previousElementSibling.textContent;
+            const itemPrice = button.previousElementSibling.textContent;
+            alert(`You have selected: ${itemName} \nPrice: ${itemPrice}`);
+        });
+    });
+
+    // Dynamic filtering example
+    const searchInput = document.getElementById("shop-search");
+    if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+            const filter = e.target.value.toLowerCase();
+            const items = document.querySelectorAll(".shop-item");
+
+            items.forEach(item => {
+                const title = item.querySelector("h3").textContent.toLowerCase();
+                if (title.includes(filter)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    }
+
+    // Adding hover animations
+    const shopItems = document.querySelectorAll(".shop-item");
+    shopItems.forEach(item => {
+        item.addEventListener("mouseover", () => {
+            item.style.boxShadow = "0 8px 15px rgba(0, 0, 0, 0.3)";
+        });
+
+        item.addEventListener("mouseout", () => {
+            item.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
